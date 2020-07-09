@@ -1,11 +1,15 @@
-﻿{
-  "Version": "12.4.1",
+{
+  "Version": "13.1.0",
   "Name": "waa.ai",
+  "DestinationType": "URLShortener",
   "RequestMethod": "POST",
-  "RequestURL": "https://api.waa.ai/shorten",
+  "RequestURL": "https://api.waa.ai/v2/links",
+  "Headers": {
+    "API-Key": "<YOUR-KEY>"
+  },
   "Body": "MultipartFormData",
   "Arguments": {
     "url": "$input$"
   },
-  "URL": "$json:data.url$"
+  "URL": "$json:data.link$"
 }
